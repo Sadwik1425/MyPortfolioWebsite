@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalva Sadwik | Java Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of a Java Full Stack Developer: projects, skills, education and contact details.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- SVG ICON SPRITE: simplified technology logos, referenced with <use href="#i-name"> -->
+  <svg class="sprite" width="0" height="0" focusable="false" aria-hidden="true">
+    <symbol id="i-java" viewBox="0 0 48 48"><path d="M14 24h18v6a8 8 0 0 1-8 8h-2a8 8 0 0 1-8-8z" fill="#5382A1"/><path d="M32 26h3a3 3 0 0 1 0 6h-3" fill="none" stroke="#5382A1" stroke-width="2.5"/><path d="M20 10c4 3-3 5 1 9M26 8c4 3-3 5 1 11" stroke="#E76F00" stroke-width="2.5" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="i-c" viewBox="0 0 48 48"><path d="M24 4l17 10v20L24 44 7 34V14z" fill="#5C6BC0"/><text x="24" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">C</text></symbol>
+    <symbol id="i-cpp" viewBox="0 0 48 48"><path d="M24 4l17 10v20L24 44 7 34V14z" fill="#00599C"/><text x="24" y="29" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">C++</text></symbol>
+    <symbol id="i-python" viewBox="0 0 48 48"><path d="M24 6c-8 0-8 3-8 6v4h8v2H12c-4 0-6 3-6 8s2 8 6 8h3v-5c0-3 2-5 5-5h8c3 0 5-2 5-5v-9c0-3-4-4-11-4z" fill="#3776AB"/><path d="M24 42c8 0 8-3 8-6v-4h-8v-2h12c4 0 6-3 6-8s-2-8-6-8h-3v5c0 3-2 5-5 5h-8c-3 0-5 2-5 5v9c0 3 4 4 11 4z" fill="#FFD43B"/></symbol>
+    <symbol id="i-html" viewBox="0 0 48 48"><path d="M8 6h32l-3 33-13 4-13-4z" fill="#E44D26"/><path d="M24 9v31l10-3 2.500-28z" fill="#F16529"/><text x="24" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">5</text></symbol>
+    <symbol id="i-css" viewBox="0 0 48 48"><path d="M8 6h32l-3 33-13 4-13-4z" fill="#1572B6"/><path d="M24 9v31l10-3 2.500-28z" fill="#33A9DC"/><text x="24" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">3</text></symbol>
+    <symbol id="i-js" viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="4" fill="#F7DF1E"/><text x="38" y="38" text-anchor="end" font-size="16" font-weight="700" fill="#222">JS</text></symbol>
+    <symbol id="i-react" viewBox="0 0 48 48"><g fill="none" stroke="#61DAFB" stroke-width="2.500"><ellipse cx="24" cy="24" rx="19" ry="7.500"/><ellipse cx="24" cy="24" rx="19" ry="7.500" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="19" ry="7.500" transform="rotate(120 24 24)"/></g><circle cx="24" cy="24" r="3.500" fill="#61DAFB"/></symbol>
+    <symbol id="i-spring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#6DB33F"/><path d="M34 12C20 12 13 20 13 30c0 3 1 5 1 5 3-9 10-13 20-14-7 3-12 8-14 15 12 1 17-8 17-17 0-3-1-7-3-7z" fill="#fff"/></symbol>
+    <symbol id="i-rest" viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="6" fill="#0EA5E9"/><text x="24" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">API</text></symbol>
+    <symbol id="i-mysql" viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="6" fill="#00758F"/><text x="24" y="29" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">MySQL</text></symbol>
+    <symbol id="i-sql" viewBox="0 0 48 48"><g fill="none" stroke="#9AA4B2" stroke-width="2.500"><ellipse cx="24" cy="12" rx="14" ry="5"/><path d="M10 12v24c0 3 6 5 14 5s14-2 14-5V12M10 24c0 3 6 5 14 5s14-2 14-5"/></g></symbol>
+    <symbol id="i-git" viewBox="0 0 48 48"><path d="M24 3l21 21-21 21L3 24z" fill="#F05032"/><circle cx="19" cy="31" r="3" fill="#fff"/><circle cx="19" cy="17" r="3" fill="#fff"/><circle cx="31" cy="23" r="3" fill="#fff"/><path d="M19 20v8M19 19l12 4" stroke="#fff" stroke-width="2.500" fill="none"/></symbol>
+    <symbol id="i-github" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#E6EDF3"/><path d="M14 20l3-7 5 3h4l5-3 3 7c1 7-3 14-10 14s-11-7-10-14z" fill="#0D1117"/></symbol>
+    <symbol id="i-vscode" viewBox="0 0 48 48"><path d="M34 5l9 4v30l-9 4L14 28 7 33l-3-2V17l3-2 7 5z" fill="#2489CA"/><path d="M34 14L22 24l12 10z" fill="#0D1117"/></symbol>
+    <symbol id="i-postman" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="#FF6C37"/><path d="M16 32l14-14m0 0l-6 1m6-1l-1 6" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="site-header">
+    <div class="header-bar container">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <img class="brand__avatar" src="assets/profile.png" alt="Profile photo of Kalva Sadwik" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Kalva Sadwik</span>
+          <span class="brand__role">Java Full Stack Developer</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <span class="icon-btn__glyph" aria-hidden="true">&#9680;</span>
+        </button>
+        <a class="btn btn--primary btn--sm" href="#contact">Send</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul class="primary-nav__list">
+        <li><a class="nav-link is-active" href="#home" data-nav="home">Home</a></li>
+        <li><a class="nav-link" href="#projects" data-nav="projects">Projects</a></li>
+        <li><a class="nav-link" href="#skills" data-nav="skills">Skills</a></li>
+        <li><a class="nav-link" href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HOME / HERO ================= -->
+    <section class="section hero" id="home" data-nav="home" aria-labelledby="hero-title">
+      <div class="container hero__grid reveal">
+        <div class="hero__content">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__title" id="hero-title">Kalva Sadwik</h1>
+          <p class="hero__designation">Java Full Stack Developer</p>
+          <p class="hero__typing" aria-live="off">
+            <span id="typed-text" data-words="Java Developer,Full Stack Developer,Software Developer">Java Developer</span><span class="typing-cursor" aria-hidden="true"></span>
+          </p>
+          <p class="hero__intro">I build web applications from database to interface. I enjoy writing clean Java back ends with Spring Boot, connecting them to responsive front ends, and learning how real systems fit together.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="assets/resume.pdf" download>Download Resume</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+          <ul class="social-list">
+            <!-- Replace the placeholder usernames with your real profile URLs -->
+            <li><a class="social-link" href="https://github.com/Sadwik1425" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a class="social-link" href="https://www.linkedin.com/in/sadwikkalva/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img class="hero__photo" src="assets/profile.png" alt="Portrait of Kalva Sadwik" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about" data-nav="home" aria-labelledby="about-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="about-title">About Me</h2>
+        <div class="about__grid">
+          <article class="panel">
+            <h3 class="panel__title">Introduction</h3>
+            <p>I am a computer science student focused on Java and full stack web development. I like turning a clear problem into a working application, from the REST API to the screen the user sees.</p>
+            <h3 class="panel__title">Career objective</h3>
+            <p>To join a development team as a Java Full Stack Developer, contribute to reliable products, and keep growing through real project work.</p>
+          </article>
+          <article class="panel">
+            <h3 class="panel__title">Technical interests</h3>
+            <p>Backend development with Spring Boot, REST API design, relational databases and responsive web interfaces.</p>
+            <h3 class="panel__title">Strengths</h3>
+            <p>Problem solving, attention to detail, steady learning and clear communication.</p>
+            <h3 class="panel__title">Currently learning</h3>
+            <p>React, deeper Spring Boot features, and testing practices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects" data-nav="projects" aria-labelledby="projects-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="projects-title">Projects</h2>
+
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="java" aria-pressed="false">Java</button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">Web Development</button>
+          <button class="filter-btn" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+          <button class="filter-btn" type="button" data-filter="other" aria-pressed="false">Other</button>
+        </div>
+
+        <!--
+          EDIT PROJECTS HERE. For each card, update the text, tags, image path,
+          and the data-url on the GitHub / Live Demo buttons. Empty data-url
+          shows a "link not added yet" message instead of a broken link.
+        -->
+        <div class="project-grid" id="project-grid">
+
+          <article class="project-card project-card--dark" data-category="web" data-details="Helps users explore MRI protocols by choosing an anatomical region and a clinical indication. Built for education only, not for clinical decisions.">
+            <div class="project-card__media"><img src="assets/project1.png" alt="Screenshot of the MRISeq Assist project" loading="lazy"></div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <span class="project-card__category">Web Development</span>
+                <button class="project-card__menu" type="button" aria-label="View details of MRISeq Assist">&#8943;</button>
+              </div>
+              <h3 class="project-card__title">MRISeq Assist</h3>
+              <p class="project-card__desc">An educational MRI sequence recommendation assistant that helps users explore appropriate MRI protocols based on anatomical regions and clinical indications.</p>
+              <ul class="tag-list"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm" type="button" data-action="github" data-url="https://github.com/Sadwik1425/frontend-">Frontend</button>
+                <button class="btn btn--ghost btn--sm" type="button" data-action="github" data-url="https://github.com/Sadwik1425/Backend-files">Backend</button>
+                <button class="btn btn--ghost btn--sm" type="button" data-action="github" data-url="https://github.com/Sadwik1425/privacy-policy">Privacy Policy</button>
+                <a class="btn btn--ghost btn--sm" href="https://www.figma.com/design/lLoGjbnUJSvu7Gghqq6KS3/complete?node-id=0-1&p=f&t=XgW8hjIuEIn9je3s-0" data-action="demo" data-url="https://www.figma.com/design/lLoGjbnUJSvu7Gghqq6KS3/complete?node-id=0-1&p=f&t=XgW8hjIuEIn9je3s-0" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--light" data-category="web" data-details="NovaCalc is a multi-mode calculator with standard and scientific modes and light, dark, and neon themes.">
+            <div class="project-card__media"><img src="assets/project2.png" alt="NovaCalc multi-mode calculator interface" loading="lazy"></div>
+            <div class="project-card__body">
+              <div class="project-card__top">
+                <span class="project-card__category">Web Development</span>
+                <button class="project-card__menu" type="button" aria-label="View details of NovaCalc">&#8943;</button>
+              </div>
+              <h3 class="project-card__title">NovaCalc - Multi-Mode Calculator</h3>
+              <p class="project-card__desc">A web calculator with standard and scientific modes, plus light, dark, and neon themes.</p>
+              <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>math.js</li></ul>
+              <div class="project-card__actions">
+                <button class="btn btn--primary btn--sm" type="button" data-action="github" data-url="https://github.com/Sadwik1425/calculator">GitHub</button>
+                <a class="btn btn--ghost btn--sm" href="https://sadwik1425.github.io/calculator/" data-action="demo" data-url="https://sadwik1425.github.io/calculator/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="empty-note" id="filter-empty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills" data-nav="skills" aria-labelledby="skills-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="skills-title">Skills</h2>
+        <div class="skills">
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Programming</h3>
+            <ul class="skill-grid">
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-java"/></svg></span><span class="skill-name">Java</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-c"/></svg></span><span class="skill-name">C</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-cpp"/></svg></span><span class="skill-name">C++</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Frontend</h3>
+            <ul class="skill-grid">
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-html"/></svg></span><span class="skill-name">HTML5</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-css"/></svg></span><span class="skill-name">CSS3</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-js"/></svg></span><span class="skill-name">JavaScript</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-react"/></svg></span><span class="skill-name">React</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Backend</h3>
+            <ul class="skill-grid">
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-spring"/></svg></span><span class="skill-name">Spring Boot</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-rest"/></svg></span><span class="skill-name">REST API</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Database</h3>
+            <ul class="skill-grid">
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-mysql"/></svg></span><span class="skill-name">MySQL</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-sql"/></svg></span><span class="skill-name">SQL</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group__title">Tools</h3>
+            <ul class="skill-grid">
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-git"/></svg></span><span class="skill-name">Git</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-github"/></svg></span><span class="skill-name">GitHub</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-vscode"/></svg></span><span class="skill-name">VS Code</span></li>
+              <li class="skill-item"><span class="skill-icon"><svg aria-hidden="true"><use href="#i-postman"/></svg></span><span class="skill-name">Postman</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="education" data-nav="skills" aria-labelledby="education-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="education-title">Education</h2>
+        <ol class="timeline">
+          <li class="timeline__item panel">
+            <h3 class="panel__title">Saveetha School of Engineering</h3>
+            <p class="timeline__meta">Department of Computer Science and Engineering</p>
+            <p class="timeline__meta">Graduated: 2026 &middot; CGPA: 8.021</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATIONS & ACHIEVEMENTS ================= -->
+    <section class="section" id="certifications" data-nav="skills" aria-labelledby="cert-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="cert-title">Certifications &amp; Achievements</h2>
+        <!--
+          Only add entries that are real. Each card: title, organization, date,
+          short description. Add a credential link only if you have one.
+        -->
+        <div class="cert-grid">
+          <article class="panel cert-card">
+            <h3 class="panel__title">Oracle Certified Professional: Java SE 17 Developer</h3>
+            <p class="cert-card__meta">Oracle University &middot; February 4, 2026</p>
+            <p>Oracle Certified Professional certification for Java SE 17 Developer.</p>
+            <p><a href="oraclejavacert.pdf" target="_blank" rel="noopener noreferrer">View certificate (PDF)</a></p>
+          </article>
+          <article class="panel cert-card">
+            <h3 class="panel__title">Internship experience</h3>
+            <p class="cert-card__meta">Company name &middot; Month Year</p>
+            <p>Add your role and what you worked on.</p>
+          </article>
+          <article class="panel cert-card">
+            <h3 class="panel__title">Hackathons &amp; coding competitions</h3>
+            <p class="cert-card__meta">Event name &middot; Month Year</p>
+            <p>Add the event, your result and what you built.</p>
+          </article>
+          <article class="panel cert-card">
+            <h3 class="panel__title">Academic achievement</h3>
+            <p class="cert-card__meta">Institution &middot; Month Year</p>
+            <p>Add the award, rank or recognition.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact" data-nav="contact" aria-labelledby="contact-title">
+      <div class="container reveal">
+        <h2 class="section__title" id="contact-title">Contact</h2>
+        <div class="contact__grid">
+
+          <!-- Leave data-endpoint empty to open the visitor's email app on submit. -->
+          <form class="contact-form" id="contact-form" data-endpoint="" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
+              <p class="field-error" id="name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required aria-describedby="subject-error">
+              <p class="field-error" id="subject-error" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error" aria-live="polite"></p>
+            </div>
+            <div class="field field--full form-footer">
+              <button class="btn btn--primary" type="submit">Send</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <aside class="contact-info panel" aria-label="Contact details">
+            <h3 class="panel__title">Reach me directly</h3>
+            <ul class="contact-info__list">
+              <li><span class="contact-info__label">Email</span> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sadwikkumarsadwik%40gmail.com" data-email="sadwikkumarsadwik@gmail.com" target="_blank" rel="noopener noreferrer">sadwikkumarsadwik@gmail.com</a></li>
+              <li><span class="contact-info__label">GitHub</span> <a href="https://github.com/Sadwik1425" target="_blank" rel="noopener noreferrer">github.com/Sadwik1425</a></li>
+              <li><span class="contact-info__label">LinkedIn</span> <a href="https://www.linkedin.com/in/sadwikkalva/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sadwikkalva/</a></li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">Kalva Sadwik</p>
+        <p class="footer__tagline">Building reliable web applications with Java.</p>
+      </div>
+      <ul class="footer__links">
+        <li><a href="https://github.com/Sadwik1425" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/sadwikkalva/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="mailto:sadwikkumarsadwik@gmail.com">Email</a></li>
+      </ul>
+      <p class="footer__copy">&copy; <span id="year">2026</span> Kalva Sadwik</p>
+      <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT DETAIL MODAL ================= -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close project details">&times;</button>
+      <img class="modal__image" id="modal-image" src="" alt="">
+      <div class="modal__content">
+        <p class="modal__category" id="modal-category"></p>
+        <h3 class="modal__title" id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <p id="modal-details"></p>
+        <ul class="tag-list" id="modal-tech"></ul>
+        <div class="modal__actions">
+          <button class="btn btn--primary btn--sm" type="button" data-action="github" data-url="" id="modal-github">GitHub</button>
+          <div id="modal-extra-links" class="modal__extra-links"></div>
+          <button class="btn btn--ghost btn--sm" type="button" data-action="demo" data-url="" id="modal-demo">Live Demo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small message bar used for "link not added yet" notices -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
